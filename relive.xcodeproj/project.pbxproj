@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D2EF5B228335D4B00B43DC7 /* SuccessScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EF5B128335D4B00B43DC7 /* SuccessScreenViewController.swift */; };
 		8D510BB5282E60620081647A /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D510BB4282E60620081647A /* PresentationController.swift */; };
 		8D510BB7282E61310081647A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D510BB6282E61310081647A /* OverlayView.xib */; };
 		8D510BB9282E632E0081647A /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D510BB8282E632E0081647A /* OverlayView.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D2EF5B128335D4B00B43DC7 /* SuccessScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessScreenViewController.swift; sourceTree = "<group>"; };
 		8D510BB4282E60620081647A /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		8D510BB6282E61310081647A /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		8D510BB8282E632E0081647A /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				8DA2CA02282A442A0034E31E /* SceneDelegate.swift */,
 				8DA2CA04282A442A0034E31E /* ViewController.swift */,
 				8DA2CA06282A442A0034E31E /* Main.storyboard */,
+				8D2EF5B128335D4B00B43DC7 /* SuccessScreenViewController.swift */,
 				8DA2CA09282A442B0034E31E /* Assets.xcassets */,
 				8DA2CA0B282A442B0034E31E /* LaunchScreen.storyboard */,
 				8DA2CA0E282A442B0034E31E /* Info.plist */,
@@ -158,6 +161,7 @@
 				8DA2CA01282A442A0034E31E /* AppDelegate.swift in Sources */,
 				8DA2CA15282B00C40034E31E /* SignupViewController.swift in Sources */,
 				8D510BB9282E632E0081647A /* OverlayView.swift in Sources */,
+				8D2EF5B228335D4B00B43DC7 /* SuccessScreenViewController.swift in Sources */,
 				8DA2CA03282A442A0034E31E /* SceneDelegate.swift in Sources */,
 				8D865F64282E678700BC959C /* HomeViewController.swift in Sources */,
 				8D510BB5282E60620081647A /* PresentationController.swift in Sources */,
@@ -309,8 +313,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C74NZQ2DUQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = relive/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -321,7 +327,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.relive.relive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.relive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -336,8 +342,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C74NZQ2DUQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = relive/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -348,7 +356,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.relive.relive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.relive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

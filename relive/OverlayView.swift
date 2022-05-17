@@ -8,7 +8,7 @@
 import UIKit
 
 class OverlayView: UIViewController {
-    
+        
     var hasSetPointOrigin = false
     var pointOrigin: CGPoint?
     
@@ -47,4 +47,52 @@ class OverlayView: UIViewController {
             }
         }
     }
+    
+    @IBAction func photoLibraryBtnPressed(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        
+        present(vc, animated: true)
+    }
+    
+    @IBAction func takePhotoFromCameraBtnPressed(_ sender: Any) {
+        
+        let vc = UIImagePickerController()
+        vc.sourceType = .camera
+        vc.delegate = self
+        
+        present(vc, animated: true)
+    }
+    
+}
+
+extension OverlayView :UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerOriginalImage")] as? UIImage {
+            let imageString = convertImageToBase64String(img: image)
+
+            picker.dismiss(animated: true, completion: nil)
+            
+            // switch to success screen
+            let storyboard = UIStoryboard(name: "Main", bundle: nil);
+            let vc = storyboard.instantiateViewController(withIdentifier: "SuccessScreen") as! SuccessScreenViewController ;
+            vc.imageData = imageString
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil);
+            
+        } else {
+            picker.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func convertImageToBase64String (img: UIImage) -> String {
+        return img.jpegData(compressionQuality: 1)?.base64EncodedString() ?? ""
+    }
+    
 }
