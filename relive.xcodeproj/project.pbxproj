@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D2CA6262838995C004C3826 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA6252838995C004C3826 /* ProfileViewController.swift */; };
+		8D2CA62828390BFC004C3826 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA62728390BFC004C3826 /* ErrorViewController.swift */; };
 		8D2EF5B228335D4B00B43DC7 /* SuccessScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EF5B128335D4B00B43DC7 /* SuccessScreenViewController.swift */; };
 		8D510BB5282E60620081647A /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D510BB4282E60620081647A /* PresentationController.swift */; };
 		8D510BB7282E61310081647A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D510BB6282E61310081647A /* OverlayView.xib */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D2CA6252838995C004C3826 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8D2CA62728390BFC004C3826 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		8D2EF5B128335D4B00B43DC7 /* SuccessScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessScreenViewController.swift; sourceTree = "<group>"; };
 		8D510BB4282E60620081647A /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		8D510BB6282E61310081647A /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 				8D510BB4282E60620081647A /* PresentationController.swift */,
 				8D510BB8282E632E0081647A /* OverlayView.swift */,
 				8D865F63282E678700BC959C /* HomeViewController.swift */,
+				8D2CA6252838995C004C3826 /* ProfileViewController.swift */,
+				8D2CA62728390BFC004C3826 /* ErrorViewController.swift */,
 			);
 			path = relive;
 			sourceTree = "<group>";
@@ -163,6 +169,8 @@
 				8D510BB9282E632E0081647A /* OverlayView.swift in Sources */,
 				8D2EF5B228335D4B00B43DC7 /* SuccessScreenViewController.swift in Sources */,
 				8DA2CA03282A442A0034E31E /* SceneDelegate.swift in Sources */,
+				8D2CA6262838995C004C3826 /* ProfileViewController.swift in Sources */,
+				8D2CA62828390BFC004C3826 /* ErrorViewController.swift in Sources */,
 				8D865F64282E678700BC959C /* HomeViewController.swift in Sources */,
 				8D510BB5282E60620081647A /* PresentationController.swift in Sources */,
 			);
