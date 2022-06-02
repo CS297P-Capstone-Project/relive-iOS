@@ -11,7 +11,7 @@ class OverlayView: UIViewController {
         
     var hasSetPointOrigin = false
     var pointOrigin: CGPoint?
-    
+    var operation: String = "ENHANCE"
 
     
     override func viewDidLoad() {
@@ -79,6 +79,7 @@ extension OverlayView :UIImagePickerControllerDelegate, UINavigationControllerDe
             let storyboard = UIStoryboard(name: "Main", bundle: nil);
             let vc = storyboard.instantiateViewController(withIdentifier: "SuccessScreen") as! SuccessScreenViewController ;
             vc.imageData = imageString
+            vc.operation = self.operation
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil);
             

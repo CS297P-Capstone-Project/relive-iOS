@@ -13,6 +13,8 @@
 		8D510BB5282E60620081647A /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D510BB4282E60620081647A /* PresentationController.swift */; };
 		8D510BB7282E61310081647A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D510BB6282E61310081647A /* OverlayView.xib */; };
 		8D510BB9282E632E0081647A /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D510BB8282E632E0081647A /* OverlayView.swift */; };
+		8D630EC22840DD5F0095F523 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D630EC12840DD5F0095F523 /* GalleryViewController.swift */; };
+		8D630EC42840F54A0095F523 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D630EC32840F54A0095F523 /* GalleryCollectionViewCell.swift */; };
 		8D865F64282E678700BC959C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D865F63282E678700BC959C /* HomeViewController.swift */; };
 		8DA2CA01282A442A0034E31E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA2CA00282A442A0034E31E /* AppDelegate.swift */; };
 		8DA2CA03282A442A0034E31E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA2CA02282A442A0034E31E /* SceneDelegate.swift */; };
@@ -21,6 +23,12 @@
 		8DA2CA0A282A442B0034E31E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DA2CA09282A442B0034E31E /* Assets.xcassets */; };
 		8DA2CA0D282A442B0034E31E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA2CA0B282A442B0034E31E /* LaunchScreen.storyboard */; };
 		8DA2CA15282B00C40034E31E /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA2CA14282B00C40034E31E /* SignupViewController.swift */; };
+		8DB694882846EE0200E0FFB8 /* FeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB694872846EE0200E0FFB8 /* FeatureTableViewCell.swift */; };
+		8DB6948A2846F05000E0FFB8 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB694892846F05000E0FFB8 /* Feature.swift */; };
+		8DB6948C2846F2BD00E0FFB8 /* FeatureDataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6948B2846F2BD00E0FFB8 /* FeatureDataFile.swift */; };
+		8DB6948E28470C8100E0FFB8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6948D28470C8100E0FFB8 /* TabBarController.swift */; };
+		8DB6949028475DC500E0FFB8 /* GifPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6948F28475DC500E0FFB8 /* GifPlugin.swift */; };
+		8DB69494284761DF00E0FFB8 /* check-mark-success.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8DB69493284761DF00E0FFB8 /* check-mark-success.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,8 @@
 		8D510BB4282E60620081647A /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		8D510BB6282E61310081647A /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		8D510BB8282E632E0081647A /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		8D630EC12840DD5F0095F523 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		8D630EC32840F54A0095F523 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8D865F63282E678700BC959C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8DA2C9FD282A442A0034E31E /* relive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = relive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA2CA00282A442A0034E31E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +50,12 @@
 		8DA2CA0C282A442B0034E31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DA2CA0E282A442B0034E31E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA2CA14282B00C40034E31E /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		8DB694872846EE0200E0FFB8 /* FeatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTableViewCell.swift; sourceTree = "<group>"; };
+		8DB694892846F05000E0FFB8 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		8DB6948B2846F2BD00E0FFB8 /* FeatureDataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureDataFile.swift; sourceTree = "<group>"; };
+		8DB6948D28470C8100E0FFB8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		8DB6948F28475DC500E0FFB8 /* GifPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifPlugin.swift; sourceTree = "<group>"; };
+		8DB69493284761DF00E0FFB8 /* check-mark-success.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "check-mark-success.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +103,14 @@
 				8D865F63282E678700BC959C /* HomeViewController.swift */,
 				8D2CA6252838995C004C3826 /* ProfileViewController.swift */,
 				8D2CA62728390BFC004C3826 /* ErrorViewController.swift */,
+				8D630EC12840DD5F0095F523 /* GalleryViewController.swift */,
+				8D630EC32840F54A0095F523 /* GalleryCollectionViewCell.swift */,
+				8DB694872846EE0200E0FFB8 /* FeatureTableViewCell.swift */,
+				8DB694892846F05000E0FFB8 /* Feature.swift */,
+				8DB6948B2846F2BD00E0FFB8 /* FeatureDataFile.swift */,
+				8DB6948D28470C8100E0FFB8 /* TabBarController.swift */,
+				8DB6948F28475DC500E0FFB8 /* GifPlugin.swift */,
+				8DB69493284761DF00E0FFB8 /* check-mark-success.gif */,
 			);
 			path = relive;
 			sourceTree = "<group>";
@@ -153,6 +177,7 @@
 				8D510BB7282E61310081647A /* OverlayView.xib in Resources */,
 				8DA2CA0A282A442B0034E31E /* Assets.xcassets in Resources */,
 				8DA2CA08282A442A0034E31E /* Main.storyboard in Resources */,
+				8DB69494284761DF00E0FFB8 /* check-mark-success.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,13 +188,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D630EC22840DD5F0095F523 /* GalleryViewController.swift in Sources */,
+				8DB6948E28470C8100E0FFB8 /* TabBarController.swift in Sources */,
+				8D630EC42840F54A0095F523 /* GalleryCollectionViewCell.swift in Sources */,
 				8DA2CA05282A442A0034E31E /* ViewController.swift in Sources */,
+				8DB6949028475DC500E0FFB8 /* GifPlugin.swift in Sources */,
+				8DB694882846EE0200E0FFB8 /* FeatureTableViewCell.swift in Sources */,
 				8DA2CA01282A442A0034E31E /* AppDelegate.swift in Sources */,
 				8DA2CA15282B00C40034E31E /* SignupViewController.swift in Sources */,
 				8D510BB9282E632E0081647A /* OverlayView.swift in Sources */,
 				8D2EF5B228335D4B00B43DC7 /* SuccessScreenViewController.swift in Sources */,
+				8DB6948A2846F05000E0FFB8 /* Feature.swift in Sources */,
 				8DA2CA03282A442A0034E31E /* SceneDelegate.swift in Sources */,
 				8D2CA6262838995C004C3826 /* ProfileViewController.swift in Sources */,
+				8DB6948C2846F2BD00E0FFB8 /* FeatureDataFile.swift in Sources */,
 				8D2CA62828390BFC004C3826 /* ErrorViewController.swift in Sources */,
 				8D865F64282E678700BC959C /* HomeViewController.swift in Sources */,
 				8D510BB5282E60620081647A /* PresentationController.swift in Sources */,
