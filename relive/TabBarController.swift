@@ -10,11 +10,13 @@ import UIKit
 class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
+       
         tabBar.barTintColor = .white
         //tabBar.isTranslucent = false
         tabBar.tintColor = .red
 //        tabBar.unselectedItemTintColor = .blue
 
     }
-
+    
+   
 }

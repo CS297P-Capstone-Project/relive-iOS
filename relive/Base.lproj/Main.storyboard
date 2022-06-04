@@ -209,7 +209,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHC-S6-OW5">
-                                <rect key="frame" x="37" y="429" width="354" height="68"/>
+                                <rect key="frame" x="37" y="551" width="354" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <nil key="textColor"/>
@@ -221,7 +221,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Gallery" image="photo.circle.fill" catalog="system" id="WGS-hl-qnB"/>
                     <connections>
-                        <outlet property="emptyGalleryNotifyLabel" destination="QHC-S6-OW5" id="zed-nX-vXS"/>
+                        <outlet property="emptyGalleryNotifyLabel" destination="QHC-S6-OW5" id="TNu-QT-2v2"/>
                         <outlet property="imgView" destination="KnI-tk-UGm" id="Mxp-P1-0ln"/>
                     </connections>
                 </viewController>
@@ -650,7 +650,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GvL-sd-SkM" customClass="BeforeAfterView" customModule="relive" customModuleProvider="target">
-                                <rect key="frame" x="49" y="320" width="325" height="370"/>
+                                <rect key="frame" x="67" y="290" width="299" height="384"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -667,7 +667,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Md8-T2-8b6">
-                                <rect key="frame" x="132" y="320" width="150" height="150"/>
+                                <rect key="frame" x="131" y="320" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.8260878706" green="0.1936792993" blue="0.1443285614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </activityIndicatorView>
@@ -693,7 +693,7 @@
                                 <color key="tintColor" red="0.8260878706" green="0.1936792993" blue="0.1443285614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JnJ-OJ-yqJ">
-                                <rect key="frame" x="87" y="116" width="240" height="152"/>
+                                <rect key="frame" x="117" y="114" width="194" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                             </imageView>
@@ -719,7 +719,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="meL-YG-NdK">
             <objects>
-                <tabBarController id="J2r-Uw-0Lp" customClass="TabBarController" customModule="relive" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="J2r-Uw-0Lp" customClass="TabBarController" customModule="relive" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ShF-Jw-4dd"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x8J-kP-b1L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -804,7 +804,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4wg-3B-2Rp"/>
+        <segue reference="nCQ-0n-qnf"/>
         <segue reference="g6G-gk-Geh"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

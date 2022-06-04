@@ -30,6 +30,25 @@ class ProfileViewController: UIViewController {
         
         clearGalleryBtn.layer.borderColor = UIColor.lightGray.cgColor
         
+        let swipeRight = UISwipeGestureRecognizer(target: self, action:  #selector(swiped))
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+       self.view.addGestureRecognizer(swipeRight)
+
+        
+    }
+    
+    @objc  func swiped(_ gesture: UISwipeGestureRecognizer) {
+        print((self.tabBarController?.selectedIndex)!)
+        if gesture.direction == .left {
+            if (self.tabBarController?.selectedIndex)! < 2
+            { // set here  your total tabs
+                self.tabBarController?.selectedIndex += 1
+            }
+        } else if gesture.direction == .right {
+            if (self.tabBarController?.selectedIndex)! > 0 {
+                self.tabBarController?.selectedIndex -= 1
+            }
+        }
     }
     
     @IBAction func pswdResetBtnPressed(_ sender: Any) {

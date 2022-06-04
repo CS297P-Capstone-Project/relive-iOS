@@ -9,10 +9,12 @@ import UIKit
 
 class GalleryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    
+    
+    
     var images: [UIImage] = []
-    
+        
     @IBOutlet weak var emptyGalleryNotifyLabel: UILabel!
-    
     
     private let collectionView = UICollectionView(
         frame: .zero,
@@ -21,11 +23,28 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var imgView: UIImageView!
     
     override func viewDidLoad() {
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action:  #selector(swiped))
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+       self.view.addGestureRecognizer(swipeRight)
+
+       let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+       self.view.addGestureRecognizer(swipeLeft)
+
+        
         super.viewDidLoad()
         collectionView.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: GalleryCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         view.addSubview(collectionView)
+        
+        if images.isEmpty {
+            emptyGalleryNotifyLabel.text = "You have no photos currently."
+        }
+        else {
+            emptyGalleryNotifyLabel.text = ""
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,6 +59,21 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
             emptyGalleryNotifyLabel.text = ""
         }
     }
+    
+    @objc  func swiped(_ gesture: UISwipeGestureRecognizer) {
+        print((self.tabBarController?.selectedIndex)!)
+        if gesture.direction == .left {
+            if (self.tabBarController?.selectedIndex)! < 2
+            { // set here  your total tabs
+                self.tabBarController?.selectedIndex += 1
+            }
+        } else if gesture.direction == .right {
+            if (self.tabBarController?.selectedIndex)! > 0 {
+                self.tabBarController?.selectedIndex -= 1
+            }
+        }
+    }
+
     
     func readImagesFromLocal() {
         let fileManager = FileManager.default

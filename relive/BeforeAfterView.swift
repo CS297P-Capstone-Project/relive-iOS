@@ -13,14 +13,25 @@ public class BeforeAfterView: UIView {
     fileprivate var leading: NSLayoutConstraint!
     fileprivate var originRect: CGRect!
     
-    public var image1: UIImage = UIImage()
+    var image1: UIImage = UIImage()
     
-    public var image2: UIImage = UIImage()
+    var image2: UIImage = UIImage()
     
     public func setData(image1: UIImage, image2: UIImage, thumbColor: UIColor) {
         imageView1.image = image1
         imageView2.image = image2
-        thumb.backgroundColor = thumbColor
+        //thumb.backgroundColor = thumbColor
+        
+        thumb.backgroundColor = .black
+        let imageName = "arrow.left.arrow.right"
+        let image = UIImage(systemName: imageName)
+//        let imageView = UIImageView(image: image!)
+//        imageView.frame = CGRect(x: thumb.frame.height, y: thumb.frame.width, width: 40, height: 40)
+//        imageView.tintColor = .red
+//        //imageView.backgroundColor = .black
+//        thumb.addSubview(imageView)
+        thumb.image = image
+        thumb.tintColor = .red
         
     }
     public var thumbColor: UIColor = UIColor.white
@@ -63,10 +74,10 @@ public class BeforeAfterView: UIView {
         return v
     }()
     
-    fileprivate lazy var thumb: UIView = {
-        let v = UIView()
-        v.backgroundColor = UIColor.white
-    
+    fileprivate lazy var thumb: UIImageView = {
+        let v = UIImageView()
+        //v.backgroundColor = UIColor.black
+        
         v.translatesAutoresizingMaskIntoConstraints = false
         v.clipsToBounds = true
         return v
@@ -96,9 +107,10 @@ public class BeforeAfterView: UIView {
 
 extension BeforeAfterView {
     fileprivate func initialize() {
+        
         imageView1.image = image1
         imageView2.image = image2
-        thumb.backgroundColor = thumbColor
+//        thumb.backgroundColor = thumbColor
         
         image1Wrapper.addSubview(imageView1)
         addSubview(imageView2)

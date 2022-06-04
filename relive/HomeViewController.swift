@@ -18,7 +18,27 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         featureTable.dataSource = self
         featureTable.delegate = self
         self.featureTable.rowHeight = 400
+        
+        
+       let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+       self.view.addGestureRecognizer(swipeLeft)
 
+
+    }
+    
+    @objc  func swiped(_ gesture: UISwipeGestureRecognizer) {
+        print((self.tabBarController?.selectedIndex)!)
+        if gesture.direction == .left {
+            if (self.tabBarController?.selectedIndex)! < 2
+            { // set here  your total tabs
+                self.tabBarController?.selectedIndex += 1
+            }
+        } else if gesture.direction == .right {
+            if (self.tabBarController?.selectedIndex)! > 0 {
+                self.tabBarController?.selectedIndex -= 1
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

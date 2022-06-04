@@ -21,6 +21,7 @@ class SuccessScreenViewController: UIViewController {
     
     @IBOutlet weak var shareBtn: UIButton!
     
+    
     @IBOutlet weak var loader: UIActivityIndicatorView!
     var imageData: String = ""
     var operation: String = ""
@@ -58,7 +59,7 @@ class SuccessScreenViewController: UIViewController {
         processedImage = makePostCall(imageString: imageData)
         
 //        self.processedImageView.image = processedImage
-        beforeAfterView.setData(image1: convertBase64StringToImage(imageBase64String: imageData), image2: processedImage, thumbColor: UIColor.black)
+        beforeAfterView.setData(image1: convertBase64StringToImage(imageBase64String: imageData), image2: processedImage, thumbColor: UIColor.red)
         
         self.loader.stopAnimating()
         self.processingInProgressLbl.text = ""
@@ -67,8 +68,8 @@ class SuccessScreenViewController: UIViewController {
         self.shareBtn.isHidden = false
         self.shareImageView.image = UIImage(systemName: "square.and.arrow.up")
         self.successImage.loadGif(name: "check-mark-success")
+
     }
-    
     
     
 
