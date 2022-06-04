@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6351EA16284AF88B0006FBD2 /* BeforeAfterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351EA15284AF88B0006FBD2 /* BeforeAfterView.swift */; };
 		8D2CA6262838995C004C3826 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA6252838995C004C3826 /* ProfileViewController.swift */; };
 		8D2CA62828390BFC004C3826 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA62728390BFC004C3826 /* ErrorViewController.swift */; };
 		8D2EF5B228335D4B00B43DC7 /* SuccessScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EF5B128335D4B00B43DC7 /* SuccessScreenViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6351EA15284AF88B0006FBD2 /* BeforeAfterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeAfterView.swift; sourceTree = "<group>"; };
 		8D2CA6252838995C004C3826 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8D2CA62728390BFC004C3826 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		8D2EF5B128335D4B00B43DC7 /* SuccessScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessScreenViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		8DA2C9F4282A442A0034E31E = {
 			isa = PBXGroup;
 			children = (
+				6351EA15284AF88B0006FBD2 /* BeforeAfterView.swift */,
 				8DA2C9FF282A442A0034E31E /* relive */,
 				8DA2C9FE282A442A0034E31E /* Products */,
 			);
@@ -204,6 +207,7 @@
 				8DB6948C2846F2BD00E0FFB8 /* FeatureDataFile.swift in Sources */,
 				8D2CA62828390BFC004C3826 /* ErrorViewController.swift in Sources */,
 				8D865F64282E678700BC959C /* HomeViewController.swift in Sources */,
+				6351EA16284AF88B0006FBD2 /* BeforeAfterView.swift in Sources */,
 				8D510BB5282E60620081647A /* PresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

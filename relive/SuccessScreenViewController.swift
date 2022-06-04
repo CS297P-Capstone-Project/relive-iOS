@@ -8,6 +8,8 @@
 import UIKit
 
 class SuccessScreenViewController: UIViewController {
+    
+    @IBOutlet weak var beforeAfterView: BeforeAfterView!
         
     @IBOutlet weak var cancelButton: UIButton!
     
@@ -21,10 +23,9 @@ class SuccessScreenViewController: UIViewController {
     
     @IBOutlet weak var loader: UIActivityIndicatorView!
     var imageData: String = ""
-    var operation: String = "" 
-    
-    @IBOutlet weak var processedImageView: UIImageView!
-    
+    var operation: String = ""
+    var processedImage: UIImage = UIImage()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,9 +55,10 @@ class SuccessScreenViewController: UIViewController {
 //        processedImageView.image = retrievedImage
         
         //uncomment for real testing
-        let processedImage = makePostCall(imageString: imageData)
+        processedImage = makePostCall(imageString: imageData)
         
-        self.processedImageView.image = processedImage
+//        self.processedImageView.image = processedImage
+        beforeAfterView.setData(image1: convertBase64StringToImage(imageBase64String: imageData), image2: processedImage, thumbColor: UIColor.black)
         
         self.loader.stopAnimating()
         self.processingInProgressLbl.text = ""
@@ -72,10 +74,10 @@ class SuccessScreenViewController: UIViewController {
 
    
     @IBAction func shareBtnPressed(_ sender: Any) {
-        let image = self.processedImageView.image
+        let image = self.processedImage
 
         // set up activity view controller
-        let imageToShare = [ image! ]
+        let imageToShare = [ image ]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
 

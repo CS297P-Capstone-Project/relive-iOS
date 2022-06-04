@@ -10,9 +10,9 @@ class FeatureDataFile {
     static let instance = FeatureDataFile()
     
     private let features = [
-        Feature(imageName: "colorize1", title: "Colorize Image", id: "COLORIZE",frameColor:.black),
-        Feature(imageName: "enhance1", title: "Enhance Image", id: "ENHANCE",frameColor:.black),
-        Feature(imageName: "unscratch1", title: "Unscratch Image", id: "UNSCRATCH",frameColor:.black)
+        Feature(oldImageName: "ColorNew",newImageName: "ColorOld", title: "Colorize Image", id: "COLORIZE",frameColor:.black),
+        Feature(oldImageName: "ColorNew",newImageName: "ColorOld", title: "Enhance Image", id: "ENHANCE",frameColor:.black),
+        Feature(oldImageName: "ScratchNew",newImageName: "ScratchOld", title: "Unscratch Image", id: "UNSCRATCH",frameColor:.black)
     ]
     
     func getFeatures() -> [Feature] {

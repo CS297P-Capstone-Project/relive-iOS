@@ -9,7 +9,8 @@ import UIKit
 
 class FeatureTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var featureImage: UIImageView!
+    @IBOutlet weak var beforeAfterView: BeforeAfterView!
+    
     @IBOutlet weak var featureTitle: UILabel!
     
     @IBOutlet weak var featureBtn: UIButton!
@@ -32,7 +33,11 @@ class FeatureTableViewCell: UITableViewCell {
     }
     
     func updateViews(feature : Feature){
-        featureImage.image = UIImage(named: feature.imageName)
+        let image1 = UIImage(named: feature.oldImageName) ?? UIImage()
+        let image2 = UIImage(named: feature.newImageName) ?? UIImage()
+        
+        beforeAfterView.setData(image1: image1, image2: image2, thumbColor: .red)
+        
         featureTitle.text = feature.title
         featureID = feature.id
         featureBackgroundImageView.backgroundColor = feature.frameColor

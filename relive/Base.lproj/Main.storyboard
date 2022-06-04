@@ -594,10 +594,6 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colorized" translatesAutoresizingMaskIntoConstraints="NO" id="vUI-bE-Eyj">
-                                                    <rect key="frame" x="74" y="39" width="282" height="227"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Colorize Image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUr-VV-xzf">
                                                     <rect key="frame" x="58" y="290" width="265" height="49"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -610,11 +606,16 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" systemColor="systemRedColor"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xzm-0m-2m2" customClass="BeforeAfterView" customModule="relive" customModuleProvider="target">
+                                                    <rect key="frame" x="58" y="39" width="312" height="230"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="beforeAfterView" destination="Xzm-0m-2m2" id="b50-Lj-kpG"/>
                                             <outlet property="featureBackgroundImageView" destination="Oe5-8L-M7N" id="oV3-UM-VWy"/>
-                                            <outlet property="featureImage" destination="vUI-bE-Eyj" id="4j6-eQ-RdW"/>
                                             <outlet property="featureTitle" destination="HUr-VV-xzf" id="ouA-sb-hcu"/>
                                         </connections>
                                     </tableViewCell>
@@ -648,10 +649,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lQI-re-JY7">
-                                <rect key="frame" x="20" y="320" width="374" height="430"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GvL-sd-SkM" customClass="BeforeAfterView" customModule="relive" customModuleProvider="target">
+                                <rect key="frame" x="49" y="320" width="325" height="370"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kls-Fw-R3g">
                                 <rect key="frame" x="0.0" y="46" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -701,9 +703,9 @@
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
+                        <outlet property="beforeAfterView" destination="GvL-sd-SkM" id="H9B-Wa-NIe"/>
                         <outlet property="cancelButton" destination="kls-Fw-R3g" id="Cxy-zR-NQ5"/>
                         <outlet property="loader" destination="Md8-T2-8b6" id="bjc-es-73b"/>
-                        <outlet property="processedImageView" destination="lQI-re-JY7" id="bNa-Jh-Vez"/>
                         <outlet property="processingInProgressLbl" destination="bs4-ul-LKl" id="cW0-6u-p8Y"/>
                         <outlet property="shareBtn" destination="rkO-Dc-uEG" id="swf-xX-BZy"/>
                         <outlet property="shareImageView" destination="Iur-xi-zMI" id="Yft-Mu-ipU"/>
@@ -802,7 +804,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nCQ-0n-qnf"/>
+        <segue reference="4wg-3B-2Rp"/>
         <segue reference="g6G-gk-Geh"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
