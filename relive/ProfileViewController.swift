@@ -38,7 +38,6 @@ class ProfileViewController: UIViewController {
     }
     
     @objc  func swiped(_ gesture: UISwipeGestureRecognizer) {
-        print((self.tabBarController?.selectedIndex)!)
         if gesture.direction == .left {
             if (self.tabBarController?.selectedIndex)! < 2
             { // set here  your total tabs

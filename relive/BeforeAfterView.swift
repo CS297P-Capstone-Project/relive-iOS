@@ -22,8 +22,8 @@ public class BeforeAfterView: UIView {
         imageView2.image = image2
         //thumb.backgroundColor = thumbColor
         
-        thumb.backgroundColor = .black
-        let imageName = "arrow.left.arrow.right"
+//        thumb.backgroundColor = .black
+        let imageName = "arrow.left.arrow.right.circle.fill"
         let image = UIImage(systemName: imageName)
 //        let imageView = UIImageView(image: image!)
 //        imageView.frame = CGRect(x: thumb.frame.height, y: thumb.frame.width, width: 40, height: 40)
@@ -145,7 +145,7 @@ extension BeforeAfterView {
             thumbWrapper.topAnchor.constraint(equalTo: image1Wrapper.topAnchor, constant: 0),
             thumbWrapper.bottomAnchor.constraint(equalTo: image1Wrapper.bottomAnchor, constant: 0),
             thumbWrapper.leadingAnchor.constraint(equalTo: image1Wrapper.leadingAnchor, constant: -20),
-            thumbWrapper.widthAnchor.constraint(equalToConstant: 40)
+            thumbWrapper.widthAnchor.constraint(equalToConstant: 35)
         ])
         
         NSLayoutConstraint.activate([
@@ -157,7 +157,7 @@ extension BeforeAfterView {
         
         leading.constant = frame.width / 2
         
-        thumb.layer.cornerRadius = 20
+//        thumb.layer.cornerRadius = 20
         imageView1.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
         
         let tap = UIPanGestureRecognizer(target: self, action: #selector(gesture(sender:)))

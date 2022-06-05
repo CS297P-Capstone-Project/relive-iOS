@@ -21,8 +21,9 @@ class SuccessScreenViewController: UIViewController {
     
     @IBOutlet weak var shareBtn: UIButton!
     
+    @IBOutlet weak var loaderGif: UIImageView!
     
-    @IBOutlet weak var loader: UIActivityIndicatorView!
+//    @IBOutlet weak var loader: UIActivityIndicatorView!
     var imageData: String = ""
     var operation: String = ""
     var processedImage: UIImage = UIImage()
@@ -30,17 +31,13 @@ class SuccessScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        shareBtn.isHidden = true
-        loader.startAnimating()
-        loader.hidesWhenStopped = true
-        loader.transform = CGAffineTransform(scaleX: 2.5, y: 2.5)
-        cancelButton.imageView?.contentMode = .scaleAspectFit
+        self.shareBtn.isHidden = true
+//        loader.startAnimating()
+//        loader.hidesWhenStopped = true
+//        loader.transform = CGAffineTransform(scaleX: 2.5, y: 2.5)
+        self.loaderGif.loadGif(name: "paint-roller")
+        self.cancelButton.imageView?.contentMode = .scaleAspectFit
         
-        //temp code
-//        loader.stopAnimating()
-//        processedImageView.image = UIImage(named: "logo1")
-        
-        // temp ends
        
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -59,20 +56,19 @@ class SuccessScreenViewController: UIViewController {
         processedImage = makePostCall(imageString: imageData)
         
 //        self.processedImageView.image = processedImage
-        beforeAfterView.setData(image1: convertBase64StringToImage(imageBase64String: imageData), image2: processedImage, thumbColor: UIColor.red)
+        beforeAfterView.setData(image1: processedImage, image2: convertBase64StringToImage(imageBase64String: imageData), thumbColor: UIColor.red)
         
-        self.loader.stopAnimating()
+//        self.loader.stopAnimating()
         self.processingInProgressLbl.text = ""
 //                        self.successImage.image = UIImage(systemName: "checkmark.circle.fill")
         
         self.shareBtn.isHidden = false
-        self.shareImageView.image = UIImage(systemName: "square.and.arrow.up")
+        self.shareImageView.image = UIImage(systemName: "square.and.arrow.up.circle.fill")
+
         self.successImage.loadGif(name: "check-mark-success")
+        self.loaderGif.isHidden = true
 
     }
-    
-    
-
    
     @IBAction func shareBtnPressed(_ sender: Any) {
         let image = self.processedImage
@@ -81,9 +77,6 @@ class SuccessScreenViewController: UIViewController {
         let imageToShare = [ image ]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
-
-        // exclude some activity types from the list (optional)
-//        activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
 
         // present the view controller
         self.present(activityViewController, animated: true, completion: nil)
@@ -97,11 +90,13 @@ class SuccessScreenViewController: UIViewController {
     
     func getUrl(operation:String) -> URL! {
         if operation=="ENHANCE" {
+//            return URL(string: "http://54.145.116.66:3000/relive-image")
             return URL(string: "http://54.145.116.66:3000/restore-image")
         } else if operation=="COLORIZE" {
             return URL(string: "http://54.145.116.66:3000/relive-image")
         } else {
             return URL(string: "http://54.145.116.66:3000/restore-image")
+//            return URL(string: "http://54.145.116.66:3000/relive-image")
         }
     }
     
@@ -180,18 +175,6 @@ class SuccessScreenViewController: UIViewController {
                         
                         processedImage = self.convertBase64StringToImage(imageBase64String:jsonResponse.restored_image)
                         saveImageLocally(image: processedImage)
-                        
-                        //uncomment
-//                        self.processedImageView.image = processedImage
-//
-//                        self.loader.stopAnimating()
-//                        self.processingInProgressLbl.text = ""
-////                        self.successImage.image = UIImage(systemName: "checkmark.circle.fill")
-//
-//                        self.shareBtn.isHidden = false
-//                        self.shareImageView.image = UIImage(systemName: "square.and.arrow.up")
-                        
-                        //
                        
                         semaphore.signal()
                         
@@ -218,9 +201,7 @@ class SuccessScreenViewController: UIViewController {
                 .default
                 .urls(for: .documentDirectory, in: .userDomainMask)
                 .first?
-                //uncomment for real testing
                 .appendingPathComponent(generateCurrentTimeStamp() + ".jpeg") else {
-//                .appendingPathComponent("test.jpeg") else {
             print("Error getting path.")
             return
         }
@@ -239,11 +220,13 @@ class SuccessScreenViewController: UIViewController {
     }
     
     func errorHandler() {
-        self.loader.stopAnimating()
-//        self.processingInProgressLbl.text = "Unable to connect to server. Please check your internet and try again."
+//        self.loader.stopAnimating()
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil);
-        let vc = storyboard.instantiateViewController(withIdentifier: "ErrorPopUp")
+        let vc = storyboard.instantiateViewController(withIdentifier: "ErrorPopUp") as! ErrorViewController
         vc.modalPresentationStyle = .fullScreen
+        vc.errorText = "Unable to connect to server. Please check your internet and try again."
+        vc.cancelBtnRedirectVCId = "TabBarController"
         self.present(vc, animated: true, completion: nil);
     }
     

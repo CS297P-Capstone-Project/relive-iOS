@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6351EA16284AF88B0006FBD2 /* BeforeAfterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351EA15284AF88B0006FBD2 /* BeforeAfterView.swift */; };
+		63A853EE284C2A320043D753 /* paint-roller.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A853ED284C2A320043D753 /* paint-roller.gif */; };
 		8D2CA6262838995C004C3826 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA6252838995C004C3826 /* ProfileViewController.swift */; };
 		8D2CA62828390BFC004C3826 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CA62728390BFC004C3826 /* ErrorViewController.swift */; };
 		8D2EF5B228335D4B00B43DC7 /* SuccessScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2EF5B128335D4B00B43DC7 /* SuccessScreenViewController.swift */; };
@@ -19,7 +20,7 @@
 		8D865F64282E678700BC959C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D865F63282E678700BC959C /* HomeViewController.swift */; };
 		8DA2CA01282A442A0034E31E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA2CA00282A442A0034E31E /* AppDelegate.swift */; };
 		8DA2CA03282A442A0034E31E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA2CA02282A442A0034E31E /* SceneDelegate.swift */; };
-		8DA2CA05282A442A0034E31E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA2CA04282A442A0034E31E /* ViewController.swift */; };
+		8DA2CA05282A442A0034E31E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA2CA04282A442A0034E31E /* LoginViewController.swift */; };
 		8DA2CA08282A442A0034E31E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA2CA06282A442A0034E31E /* Main.storyboard */; };
 		8DA2CA0A282A442B0034E31E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DA2CA09282A442B0034E31E /* Assets.xcassets */; };
 		8DA2CA0D282A442B0034E31E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA2CA0B282A442B0034E31E /* LaunchScreen.storyboard */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		6351EA15284AF88B0006FBD2 /* BeforeAfterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeAfterView.swift; sourceTree = "<group>"; };
+		63A853ED284C2A320043D753 /* paint-roller.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "paint-roller.gif"; sourceTree = "<group>"; };
 		8D2CA6252838995C004C3826 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8D2CA62728390BFC004C3826 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		8D2EF5B128335D4B00B43DC7 /* SuccessScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessScreenViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 		8DA2C9FD282A442A0034E31E /* relive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = relive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA2CA00282A442A0034E31E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DA2CA02282A442A0034E31E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8DA2CA04282A442A0034E31E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8DA2CA04282A442A0034E31E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8DA2CA07282A442A0034E31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DA2CA09282A442B0034E31E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DA2CA0C282A442B0034E31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,7 +96,7 @@
 				8D510BB6282E61310081647A /* OverlayView.xib */,
 				8DA2CA00282A442A0034E31E /* AppDelegate.swift */,
 				8DA2CA02282A442A0034E31E /* SceneDelegate.swift */,
-				8DA2CA04282A442A0034E31E /* ViewController.swift */,
+				8DA2CA04282A442A0034E31E /* LoginViewController.swift */,
 				8DA2CA06282A442A0034E31E /* Main.storyboard */,
 				8D2EF5B128335D4B00B43DC7 /* SuccessScreenViewController.swift */,
 				8DA2CA09282A442B0034E31E /* Assets.xcassets */,
@@ -114,6 +116,7 @@
 				8DB6948D28470C8100E0FFB8 /* TabBarController.swift */,
 				8DB6948F28475DC500E0FFB8 /* GifPlugin.swift */,
 				8DB69493284761DF00E0FFB8 /* check-mark-success.gif */,
+				63A853ED284C2A320043D753 /* paint-roller.gif */,
 			);
 			path = relive;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				8DA2CA0D282A442B0034E31E /* LaunchScreen.storyboard in Resources */,
 				8D510BB7282E61310081647A /* OverlayView.xib in Resources */,
 				8DA2CA0A282A442B0034E31E /* Assets.xcassets in Resources */,
+				63A853EE284C2A320043D753 /* paint-roller.gif in Resources */,
 				8DA2CA08282A442A0034E31E /* Main.storyboard in Resources */,
 				8DB69494284761DF00E0FFB8 /* check-mark-success.gif in Resources */,
 			);
@@ -194,7 +198,7 @@
 				8D630EC22840DD5F0095F523 /* GalleryViewController.swift in Sources */,
 				8DB6948E28470C8100E0FFB8 /* TabBarController.swift in Sources */,
 				8D630EC42840F54A0095F523 /* GalleryCollectionViewCell.swift in Sources */,
-				8DA2CA05282A442A0034E31E /* ViewController.swift in Sources */,
+				8DA2CA05282A442A0034E31E /* LoginViewController.swift in Sources */,
 				8DB6949028475DC500E0FFB8 /* GifPlugin.swift in Sources */,
 				8DB694882846EE0200E0FFB8 /* FeatureTableViewCell.swift in Sources */,
 				8DA2CA01282A442A0034E31E /* AppDelegate.swift in Sources */,

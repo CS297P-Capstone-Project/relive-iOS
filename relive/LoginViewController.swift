@@ -7,12 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextViewDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
-    
-    
-    @IBOutlet weak var username: UITextView!
-    @IBOutlet weak var password: UITextView!
+    @IBOutlet weak var username: UITextField!
+ 
+    @IBOutlet weak var password: UITextField!
     
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -29,33 +28,35 @@ class ViewController: UIViewController, UITextViewDelegate {
         
         password.delegate = self
         password.text = "password"
-        password.isSecureTextEntry.toggle()
         password.textColor = UIColor.lightGray
         
     }
+    @IBAction func unHideBtnPressed(_ sender: Any) {
+        self.password.isSecureTextEntry.toggle()
+    }
     
     
-    func textViewDidBeginEditing(_ textView :UITextView) {
-        if textView.textColor == UIColor.lightGray {
-            textView.text = nil
-            textView.textColor = UIColor.black
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.textColor == UIColor.lightGray {
+            textField.text = nil
+            textField.textColor = UIColor.black
         }
-        if !textView.text.isEmpty {
-            setTextFieldBorder(textField: textView)
+        if !(textField.text!.isEmpty) {
+            setTextFieldBorder(textField: textField)
         }
     }
     
-    func textViewDidEndEditing(_ textView :UITextView) {
-        if textView.text.isEmpty {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text!.isEmpty {
             let borderColor = UIColor(red:1.0, green:0.0, blue:0.0, alpha: 1.0)
-            textView.layer.borderColor = borderColor.cgColor
+            textField.layer.borderColor = borderColor.cgColor
             errorLabel.text = "Please enter all required details."
         } else {
-            setTextFieldBorder(textField: textView)
+            setTextFieldBorder(textField: textField)
         }
     }
     
-    func setTextFieldBorder (textField :UITextView) {
+    func setTextFieldBorder (textField :UITextField) {
         let borderColor = UIColor(red:0.85, green:0.85, blue:0.85, alpha: 1.0)
         textField.layer.borderWidth = 0.5
         textField.layer.borderColor = borderColor.cgColor
@@ -85,6 +86,12 @@ class ViewController: UIViewController, UITextViewDelegate {
             errorLabel.text = "Incorrect username or password."
         } else {
             errorLabel.text = ""
+            // switch to home screen
+            let storyboard = UIStoryboard(name: "Main", bundle: nil);
+            let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .flipHorizontal
+            self.present(vc, animated: true, completion: nil);
         }
     }
     

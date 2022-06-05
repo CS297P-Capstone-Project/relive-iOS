@@ -9,8 +9,6 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
-    
     @IBOutlet weak var featureTable: UITableView!
 
     override func viewDidLoad() {
@@ -23,12 +21,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
         swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
        self.view.addGestureRecognizer(swipeLeft)
-
-
     }
     
     @objc  func swiped(_ gesture: UISwipeGestureRecognizer) {
-        print((self.tabBarController?.selectedIndex)!)
         if gesture.direction == .left {
             if (self.tabBarController?.selectedIndex)! < 2
             { // set here  your total tabs
@@ -60,7 +55,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @objc func showMiracle(operation :String) {
-            
             let slideVC = OverlayView()
             slideVC.modalPresentationStyle = .custom
             slideVC.transitioningDelegate = self

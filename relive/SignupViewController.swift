@@ -7,13 +7,13 @@
 
 import UIKit
 
-class SignupViewController: UIViewController, UITextViewDelegate {
+class SignupViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var firstName: UITextView!
-    @IBOutlet weak var lastName: UITextView!
-    @IBOutlet weak var username: UITextView!
-    @IBOutlet weak var password: UITextView!
-    @IBOutlet weak var reEnteredPassword: UITextView!
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var reEnteredPassword: UITextField!
     
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -46,7 +46,7 @@ class SignupViewController: UIViewController, UITextViewDelegate {
         reEnteredPassword.textColor = UIColor.lightGray
     }
     
-    func setTextFieldBorder (textField :UITextView) {
+    func setTextFieldBorder (textField :UITextField) {
         let borderColor = UIColor(red:0.85, green:0.85, blue:0.85, alpha: 1.0)
         textField.layer.borderWidth = 0.5
         textField.layer.borderColor = borderColor.cgColor
@@ -61,28 +61,29 @@ class SignupViewController: UIViewController, UITextViewDelegate {
         reEnteredPassword.resignFirstResponder()
     }
     
-    func textViewDidBeginEditing(_ textView :UITextView) {
-        if textView.textColor == UIColor.lightGray {
-            textView.text = nil
-            textView.textColor = UIColor.black
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        showErrorPopup()
+        if textField.textColor == UIColor.lightGray {
+            textField.text = nil
+            textField.textColor = UIColor.black
         }
-        if !textView.text.isEmpty {
-            setTextFieldBorder(textField: textView)
+        if !textField.text!.isEmpty {
+            setTextFieldBorder(textField: textField)
         }
     }
     
-    func textViewDidEndEditing(_ textView :UITextView) {
-        if textView.text.isEmpty {
-            setBorderRed(textView)
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text!.isEmpty {
+            setBorderRed(textField)
             errorLabel.text = "Please enter all required details."
         } else {
-            setTextFieldBorder(textField: textView)
+            setTextFieldBorder(textField: textField)
         }
     }
     
-    func setBorderRed (_ textView :UITextView){
+    func setBorderRed (_ textField :UITextField){
         let borderColor = UIColor(red:1.0, green:0.0, blue:0.0, alpha: 1.0)
-        textView.layer.borderColor = borderColor.cgColor
+        textField.layer.borderColor = borderColor.cgColor
     }
 
     @IBAction func signUpBtnPressed(_ sender: Any) {
@@ -101,17 +102,18 @@ class SignupViewController: UIViewController, UITextViewDelegate {
             setBorderRed(reEnteredPassword)
         } else {
             errorLabel.text = ""
+            showErrorPopup()
         }
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func showErrorPopup() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier: "ErrorPopUp") as! ErrorViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.errorText = "New registrations are closed!"
+        vc.cancelBtnRedirectVCId = "LoginScreen"
+        self.present(vc, animated: true, completion: nil);
     }
-    */
 
 }

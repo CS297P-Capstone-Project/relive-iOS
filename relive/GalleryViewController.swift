@@ -61,7 +61,6 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     @objc  func swiped(_ gesture: UISwipeGestureRecognizer) {
-        print((self.tabBarController?.selectedIndex)!)
         if gesture.direction == .left {
             if (self.tabBarController?.selectedIndex)! < 2
             { // set here  your total tabs
@@ -148,8 +147,6 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-//        print("Selected section \(indexPath.section) and row \(indexPath.row)")
-        //button action to go here
     }
 
 }
