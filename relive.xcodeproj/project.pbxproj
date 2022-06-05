@@ -15,6 +15,7 @@
 		8D510BB5282E60620081647A /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D510BB4282E60620081647A /* PresentationController.swift */; };
 		8D510BB7282E61310081647A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D510BB6282E61310081647A /* OverlayView.xib */; };
 		8D510BB9282E632E0081647A /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D510BB8282E632E0081647A /* OverlayView.swift */; };
+		8D56DB81284D641400F89381 /* logo-new2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D56DB80284D641400F89381 /* logo-new2.png */; };
 		8D630EC22840DD5F0095F523 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D630EC12840DD5F0095F523 /* GalleryViewController.swift */; };
 		8D630EC42840F54A0095F523 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D630EC32840F54A0095F523 /* GalleryCollectionViewCell.swift */; };
 		8D865F64282E678700BC959C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D865F63282E678700BC959C /* HomeViewController.swift */; };
@@ -42,6 +43,7 @@
 		8D510BB4282E60620081647A /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		8D510BB6282E61310081647A /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		8D510BB8282E632E0081647A /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		8D56DB80284D641400F89381 /* logo-new2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-new2.png"; sourceTree = "<group>"; };
 		8D630EC12840DD5F0095F523 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		8D630EC32840F54A0095F523 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8D865F63282E678700BC959C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				8DA2CA09282A442B0034E31E /* Assets.xcassets */,
 				8DA2CA0B282A442B0034E31E /* LaunchScreen.storyboard */,
 				8DA2CA0E282A442B0034E31E /* Info.plist */,
+				8D56DB80284D641400F89381 /* logo-new2.png */,
 				8DA2CA14282B00C40034E31E /* SignupViewController.swift */,
 				8D510BB4282E60620081647A /* PresentationController.swift */,
 				8D510BB8282E632E0081647A /* OverlayView.swift */,
@@ -181,6 +184,7 @@
 			files = (
 				8DA2CA0D282A442B0034E31E /* LaunchScreen.storyboard in Resources */,
 				8D510BB7282E61310081647A /* OverlayView.xib in Resources */,
+				8D56DB81284D641400F89381 /* logo-new2.png in Resources */,
 				8DA2CA0A282A442B0034E31E /* Assets.xcassets in Resources */,
 				63A853EE284C2A320043D753 /* paint-roller.gif in Resources */,
 				8DA2CA08282A442A0034E31E /* Main.storyboard in Resources */,
