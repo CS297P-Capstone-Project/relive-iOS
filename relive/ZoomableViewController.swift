@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ZoomableViewController: UIViewController {
+class ZoomableViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -16,6 +16,7 @@ class ZoomableViewController: UIViewController {
     @IBOutlet weak var shareBtn: UIImageView!
     @IBOutlet weak var cancelBtn: UIButton!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,10 +24,21 @@ class ZoomableViewController: UIViewController {
         
         imageView.isUserInteractionEnabled = true
         
-        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchGesture))
-        imageView.addGestureRecognizer(pinchGesture)
+//        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchGesture))
+//        pinchGesture.
+//        imageView.addGestureRecognizer(pinchGesture)
+        
+        scrollView.minimumZoomScale = 1.0
+        scrollView.maximumZoomScale = 6.0
+        
+        
         self.cancelBtn.imageView?.contentMode = .scaleAspectFit
     }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
     @IBAction func shareBtnPressed(_ sender: Any) {
         let image = self.imageView.image
 

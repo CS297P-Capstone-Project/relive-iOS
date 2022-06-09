@@ -15,7 +15,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var errorLabel: UILabel!
     
-    var loginCredentials : [String : String] = ["test":"test"]
+    var loginCredentials : [String : String] = ["test":"test","username":"password"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
