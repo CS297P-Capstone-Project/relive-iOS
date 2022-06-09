@@ -111,7 +111,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil);
         let vc = storyboard.instantiateViewController(withIdentifier: "ErrorPopUp") as! ErrorViewController
         vc.modalPresentationStyle = .fullScreen
-        vc.errorText = "New registrations are closed!"
+        vc.errorText = "New registrations are closed! Please visit booth 30 to experience Relive!"
         vc.cancelBtnRedirectVCId = "LoginScreen"
         self.present(vc, animated: true, completion: nil);
     }

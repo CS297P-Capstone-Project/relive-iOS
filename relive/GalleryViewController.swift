@@ -10,17 +10,19 @@ import UIKit
 class GalleryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
-    
-    
     var images: [UIImage] = []
+    var imageNames : [URL] = []
         
-    @IBOutlet weak var emptyGalleryNotifyLabel: UILabel!
+//    @IBOutlet weak var emptyGalleryNotifyLabel: UILabel!
     
-    private let collectionView = UICollectionView(
-        frame: .zero,
-        collectionViewLayout: UICollectionViewFlowLayout())
+//    private let collectionView = UICollectionView(
+//        frame: .zero,
+//        collectionViewLayout: UICollectionViewFlowLayout())
     
-    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+//    @IBOutlet weak var imgView: UIImageView!
     
     override func viewDidLoad() {
         
@@ -34,30 +36,32 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
 
         
         super.viewDidLoad()
-        collectionView.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: GalleryCollectionViewCell.identifier)
+        
+//        collectionView.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: GalleryCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-        view.addSubview(collectionView)
+//        view.addSubview(collectionView)
         
-        if images.isEmpty {
-            emptyGalleryNotifyLabel.text = "You have no photos currently."
-        }
-        else {
-            emptyGalleryNotifyLabel.text = ""
-        }
+//        if images.isEmpty {
+//            emptyGalleryNotifyLabel.text = "You have no photos currently."
+//        }
+//        else {
+//            emptyGalleryNotifyLabel.text = ""
+//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         collectionView.reloadData()
         images = []
+        imageNames = []
         readImagesFromLocal()
         
-        if images.isEmpty {
-            emptyGalleryNotifyLabel.text = "You have no photos currently."
-        }
-        else {
-            emptyGalleryNotifyLabel.text = ""
-        }
+//        if images.isEmpty {
+//            emptyGalleryNotifyLabel.text = "You have no photos currently."
+//        }
+//        else {
+//            emptyGalleryNotifyLabel.text = ""
+//        }
     }
     
     @objc  func swiped(_ gesture: UISwipeGestureRecognizer) {
@@ -80,6 +84,7 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
 //        let directoryURL = documentsURL.appendingPathComponent(directoryName)
         do {
             let fileURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
+            imageNames = fileURLs
             // process files
             
             for fileUrl in fileURLs {
@@ -114,20 +119,7 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
         return cell
     }
     
-    func retriveImageFromLocal(imageName :String) -> UIImage? {
-        guard
-            let path = FileManager
-                .default
-                .urls(for: .documentDirectory, in: .userDomainMask)
-                .first?
-                //uncomment for real testing
-//                .appendingPathComponent(generateCurrentTimeStamp() + ".jpeg") else {
-                .appendingPathComponent("test.jpeg") else {
-            print("Error getting path.")
-            return nil
-        }
-        return UIImage(contentsOfFile: path.path)
-    }
+
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (view.frame.size.width/2) - 10, height: (view.frame.size.width/2) - 10)
@@ -146,7 +138,16 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
+        print("Image selected \(indexPath.row)")
+//        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc = storyboard.instantiateViewController(withIdentifier: "ZoomableViewController") as! ZoomableViewController ;
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .flipHorizontal
+        vc.imageUrl = imageNames[indexPath.row]
+        self.present(vc, animated: true, completion: nil);
     }
+    
 
 }

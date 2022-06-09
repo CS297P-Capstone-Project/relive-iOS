@@ -16,6 +16,7 @@
 		8D510BB7282E61310081647A /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D510BB6282E61310081647A /* OverlayView.xib */; };
 		8D510BB9282E632E0081647A /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D510BB8282E632E0081647A /* OverlayView.swift */; };
 		8D56DB81284D641400F89381 /* logo-new2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D56DB80284D641400F89381 /* logo-new2.png */; };
+		8D56DB852851EF5600F89381 /* ZoomableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D56DB842851EF5600F89381 /* ZoomableViewController.swift */; };
 		8D630EC22840DD5F0095F523 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D630EC12840DD5F0095F523 /* GalleryViewController.swift */; };
 		8D630EC42840F54A0095F523 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D630EC32840F54A0095F523 /* GalleryCollectionViewCell.swift */; };
 		8D865F64282E678700BC959C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D865F63282E678700BC959C /* HomeViewController.swift */; };
@@ -44,6 +45,7 @@
 		8D510BB6282E61310081647A /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		8D510BB8282E632E0081647A /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		8D56DB80284D641400F89381 /* logo-new2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-new2.png"; sourceTree = "<group>"; };
+		8D56DB842851EF5600F89381 /* ZoomableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableViewController.swift; sourceTree = "<group>"; };
 		8D630EC12840DD5F0095F523 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		8D630EC32840F54A0095F523 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8D865F63282E678700BC959C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				8DA2CA02282A442A0034E31E /* SceneDelegate.swift */,
 				8DA2CA04282A442A0034E31E /* LoginViewController.swift */,
 				8DA2CA06282A442A0034E31E /* Main.storyboard */,
+				8D56DB842851EF5600F89381 /* ZoomableViewController.swift */,
 				8D2EF5B128335D4B00B43DC7 /* SuccessScreenViewController.swift */,
 				8DA2CA09282A442B0034E31E /* Assets.xcassets */,
 				8DA2CA0B282A442B0034E31E /* LaunchScreen.storyboard */,
@@ -217,6 +220,7 @@
 				8D865F64282E678700BC959C /* HomeViewController.swift in Sources */,
 				6351EA16284AF88B0006FBD2 /* BeforeAfterView.swift in Sources */,
 				8D510BB5282E60620081647A /* PresentationController.swift in Sources */,
+				8D56DB852851EF5600F89381 /* ZoomableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +281,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 644V82KLG7;
+				DEVELOPMENT_TEAM = C74NZQ2DUQ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -339,7 +343,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 644V82KLG7;
+				DEVELOPMENT_TEAM = C74NZQ2DUQ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -367,7 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 644V82KLG7;
+				DEVELOPMENT_TEAM = C74NZQ2DUQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = relive/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to photos.";
@@ -396,7 +400,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 644V82KLG7;
+				DEVELOPMENT_TEAM = C74NZQ2DUQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = relive/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to photos.";
