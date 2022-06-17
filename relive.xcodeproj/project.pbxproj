@@ -27,6 +27,10 @@
 		8DA2CA0A282A442B0034E31E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DA2CA09282A442B0034E31E /* Assets.xcassets */; };
 		8DA2CA0D282A442B0034E31E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA2CA0B282A442B0034E31E /* LaunchScreen.storyboard */; };
 		8DA2CA15282B00C40034E31E /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA2CA14282B00C40034E31E /* SignupViewController.swift */; };
+		8DB25CE628521FB80055E602 /* camera-loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8DB25CE528521FB80055E602 /* camera-loader.gif */; };
+		8DB25CE8285220670055E602 /* paint-loader-butterfly.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8DB25CE7285220670055E602 /* paint-loader-butterfly.gif */; };
+		8DB25CEA285220FA0055E602 /* Roller-colorful.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8DB25CE9285220FA0055E602 /* Roller-colorful.gif */; };
+		8DB25CEC285221E50055E602 /* design.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8DB25CEB285221E50055E602 /* design.gif */; };
 		8DB694882846EE0200E0FFB8 /* FeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB694872846EE0200E0FFB8 /* FeatureTableViewCell.swift */; };
 		8DB6948A2846F05000E0FFB8 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB694892846F05000E0FFB8 /* Feature.swift */; };
 		8DB6948C2846F2BD00E0FFB8 /* FeatureDataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6948B2846F2BD00E0FFB8 /* FeatureDataFile.swift */; };
@@ -58,6 +62,10 @@
 		8DA2CA0C282A442B0034E31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DA2CA0E282A442B0034E31E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA2CA14282B00C40034E31E /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		8DB25CE528521FB80055E602 /* camera-loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "camera-loader.gif"; sourceTree = "<group>"; };
+		8DB25CE7285220670055E602 /* paint-loader-butterfly.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "paint-loader-butterfly.gif"; sourceTree = "<group>"; };
+		8DB25CE9285220FA0055E602 /* Roller-colorful.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Roller-colorful.gif"; sourceTree = "<group>"; };
+		8DB25CEB285221E50055E602 /* design.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = design.gif; sourceTree = "<group>"; };
 		8DB694872846EE0200E0FFB8 /* FeatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTableViewCell.swift; sourceTree = "<group>"; };
 		8DB694892846F05000E0FFB8 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		8DB6948B2846F2BD00E0FFB8 /* FeatureDataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureDataFile.swift; sourceTree = "<group>"; };
@@ -123,6 +131,10 @@
 				8DB6948F28475DC500E0FFB8 /* GifPlugin.swift */,
 				8DB69493284761DF00E0FFB8 /* check-mark-success.gif */,
 				63A853ED284C2A320043D753 /* paint-roller.gif */,
+				8DB25CEB285221E50055E602 /* design.gif */,
+				8DB25CE528521FB80055E602 /* camera-loader.gif */,
+				8DB25CE7285220670055E602 /* paint-loader-butterfly.gif */,
+				8DB25CE9285220FA0055E602 /* Roller-colorful.gif */,
 			);
 			path = relive;
 			sourceTree = "<group>";
@@ -187,8 +199,12 @@
 			files = (
 				8DA2CA0D282A442B0034E31E /* LaunchScreen.storyboard in Resources */,
 				8D510BB7282E61310081647A /* OverlayView.xib in Resources */,
+				8DB25CE628521FB80055E602 /* camera-loader.gif in Resources */,
 				8D56DB81284D641400F89381 /* logo-new2.png in Resources */,
+				8DB25CE8285220670055E602 /* paint-loader-butterfly.gif in Resources */,
+				8DB25CEC285221E50055E602 /* design.gif in Resources */,
 				8DA2CA0A282A442B0034E31E /* Assets.xcassets in Resources */,
+				8DB25CEA285220FA0055E602 /* Roller-colorful.gif in Resources */,
 				63A853EE284C2A320043D753 /* paint-roller.gif in Resources */,
 				8DA2CA08282A442A0034E31E /* Main.storyboard in Resources */,
 				8DB69494284761DF00E0FFB8 /* check-mark-success.gif in Resources */,
@@ -374,18 +390,20 @@
 				DEVELOPMENT_TEAM = C74NZQ2DUQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = relive/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to Camera";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.relive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.relive.capstone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -403,18 +421,20 @@
 				DEVELOPMENT_TEAM = C74NZQ2DUQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = relive/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to Camera";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.relive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.relive.capstone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -13,11 +13,12 @@ class SuccessScreenViewController: UIViewController {
         
     @IBOutlet weak var cancelButton: UIButton!
     
-    @IBOutlet weak var successImage: UIImageView!
+//    @IBOutlet weak var successImage: UIImageView!
     
     @IBOutlet weak var shareImageView: UIImageView!
     
-    @IBOutlet weak var processingInProgressLbl: UILabel!
+//    @IBOutlet weak var processingInProgressLbl: UILabel!
+    @IBOutlet weak var topLabel: UILabel!
     
     @IBOutlet weak var shareBtn: UIButton!
     
@@ -32,11 +33,14 @@ class SuccessScreenViewController: UIViewController {
         super.viewDidLoad()
         
         self.shareBtn.isHidden = true
+        self.shareImageView.isHidden = true
 //        loader.startAnimating()
 //        loader.hidesWhenStopped = true
 //        loader.transform = CGAffineTransform(scaleX: 2.5, y: 2.5)
-        self.loaderGif.loadGif(name: "paint-roller")
+        self.loaderGif.loadGif(name: "Roller-colorful")
         self.cancelButton.imageView?.contentMode = .scaleAspectFit
+        topLabel.font = topLabel.font.withSize(25)
+        topLabel.text = "Your image is being processed..."
         
        
     }
@@ -55,19 +59,33 @@ class SuccessScreenViewController: UIViewController {
         //uncomment for real testing
         processedImage = makePostCall(imageString: imageData)
         
+        topLabel.font = topLabel.font.withSize(30)
+        topLabel.text = "Your image is ready!"
 //        self.processedImageView.image = processedImage
         beforeAfterView.setData(image1: processedImage, image2: convertBase64StringToImage(imageBase64String: imageData), thumbColor: UIColor.red)
         
 //        self.loader.stopAnimating()
-        self.processingInProgressLbl.text = ""
+//        self.processingInProgressLbl.text = ""
 //                        self.successImage.image = UIImage(systemName: "checkmark.circle.fill")
         
         self.shareBtn.isHidden = false
-        self.shareImageView.image = UIImage(systemName: "square.and.arrow.up.circle.fill")
+        self.shareImageView.isHidden = false
+//        self.shareImageView.image = UIImage(systemName: "square.and.arrow.up.circle.fill")
 
-        self.successImage.loadGif(name: "check-mark-success")
+//        self.successImage.loadGif(name: "check-mark-success")
+        
         self.loaderGif.isHidden = true
-
+    }
+    
+    func removeGif() {
+        do {
+            sleep(300)
+//            try await Task.sleep(nanoseconds: UInt64(1.5 * Double(NSEC_PER_SEC)))
+//            successImage.isHidden = true
+        } catch {
+            
+        }
+        // Put your code which should be executed with a delay here
     }
    
     @IBAction func shareBtnPressed(_ sender: Any) {
@@ -90,13 +108,15 @@ class SuccessScreenViewController: UIViewController {
     
     func getUrl(operation:String) -> URL! {
         if operation=="ENHANCE" {
-//            return URL(string: "http://54.145.116.66:3000/relive-image")
-            return URL(string: "http://54.145.116.66:3000/restore-image")
+            return URL(string: "http://54.145.116.66:3000/relive-image")
+            //mock api
+//            return URL(string: "http://54.145.116.66:3000/restore-image")
         } else if operation=="COLORIZE" {
             return URL(string: "http://54.145.116.66:3000/relive-image")
         } else {
-            return URL(string: "http://54.145.116.66:3000/restore-image")
-//            return URL(string: "http://54.145.116.66:3000/relive-image")
+            //mock api
+//            return URL(string: "http://54.145.116.66:3000/restore-image")
+            return URL(string: "http://54.145.116.66:3000/relive-image")
         }
     }
     
@@ -177,6 +197,7 @@ class SuccessScreenViewController: UIViewController {
                         saveImageLocally(image: processedImage)
                        
                         semaphore.signal()
+                        
                         
                     } catch {
                         print("Error: Trying to convert JSON data to string")

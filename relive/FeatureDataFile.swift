@@ -11,7 +11,7 @@ class FeatureDataFile {
     
     private let features = [
         Feature(oldImageName: "ColorNew",newImageName: "ColorOld", title: "Colorize Image", id: "COLORIZE",frameColor:.black),
-        Feature(oldImageName: "enhanceNew",newImageName: "enhanceOld", title: "Enhance Image", id: "ENHANCE",frameColor:.black),
+        Feature(oldImageName: "enhanceNew1",newImageName: "enhanceOld1", title: "Enhance Image", id: "ENHANCE",frameColor:.black),
         Feature(oldImageName: "ScratchNew",newImageName: "ScratchOld", title: "Unscratch Image", id: "UNSCRATCH",frameColor:.black)
     ]
     

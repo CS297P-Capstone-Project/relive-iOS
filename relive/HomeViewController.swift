@@ -18,9 +18,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.featureTable.rowHeight = 400
         
         
-       let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
-        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
-       self.view.addGestureRecognizer(swipeLeft)
+//       let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
+//        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+//       self.view.addGestureRecognizer(swipeLeft)
     }
     
     @objc  func swiped(_ gesture: UISwipeGestureRecognizer) {

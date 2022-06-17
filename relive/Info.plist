@@ -6,14 +6,6 @@
 	<array>
 		<string>logo-new2.png</string>
 	</array>
-	<key>CFBundleIdentifier</key>
-	<string></string>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Please allow access to Camera</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Please allow access to photos.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
