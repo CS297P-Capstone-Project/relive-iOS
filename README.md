@@ -20,7 +20,7 @@ Relive is an easy-to-use intuitive mobile application that restores and colorize
 
 <a href="https://www.youtube.com/watch?v=qOyvaqSzNaQ">
  <img alt="Qries" src="https://user-images.githubusercontent.com/97596031/188805643-caf8a3c9-1a49-49b9-b519-ffbf403ce6ca.png"
- width=400" height="500">
+ width=400" height="450">
 </a>
 
 ## Contributors
