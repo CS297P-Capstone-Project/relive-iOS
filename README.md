@@ -4,7 +4,7 @@ Relive is an easy-to-use intuitive mobile application that restores and colorize
 # Features include:
 
 - Ability to restore and colorize an image quickly (~ 10 seconds) <br>
-- Leverages state of the art Machine Learning APIs powered by Hotpot.ai and DeepAI <br>
+- Leverages state-of-the-art Machine Learning APIs powered by Hotpot.ai and DeepAI <br>
 - Share the enhanced image to your favorite social media <br>
 - A gallery window in the application to view all restored images in one place <br>
 
